@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MadarLead — Business Psychology Center | Psychology-Driven Leadership Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&family=Space+Mono:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --purple: #6B2D8B;
+  --purple-deep: #4A1A65;
+  --purple-light: #9B4DCA;
+  --gray-dark: #3D3D3D;
+  --gray-mid: #6B6B6B;
+  --gray-light: #F4F2F7;
+  --white: #FEFEFE;
+  --orbit-teal: #1A7A6E;
+  --orbit-gold: #C4922A;
+  --ink: #1C1C1C;
+  --rule: rgba(107, 45, 139, 0.15);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--white);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+/* ─── NAV ─── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 5vw;
+  height: 68px;
+  background: rgba(254,254,254,0.95);
+  border-bottom: 1px solid var(--rule);
+  backdrop-filter: blur(12px);
+}
+.nav-logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+.logo-mark { flex-shrink: 0; display: block; }
+.logo-type { display: flex; flex-direction: column; justify-content: center; gap: 3px; }
+.logo-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 21px; font-weight: 400; letter-spacing: 0.07em;
+  line-height: 1; color: var(--ink);
+}
+.logo-n-madar { color: var(--ink); }
+.logo-n-lead  { color: var(--purple); font-weight: 700; }
+.logo-descriptor {
+  font-family: 'Space Mono', monospace;
+  font-size: 7.5px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gray-mid); line-height: 1;
+}
+.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links a {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; font-weight: 500; letter-spacing: 0.12em;
+  text-transform: uppercase; text-decoration: none;
+  color: var(--gray-mid);
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--purple); }
+.nav-cta {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; text-decoration: none;
+  color: var(--white); background: var(--purple);
+  padding: 9px 22px; border: none; cursor: pointer;
+  transition: background 0.2s;
+}
+.nav-cta:hover { background: var(--purple-deep); }
+
+/* ─── HERO ─── */
+#hero {
+  min-height: 100vh;
+  display: grid; grid-template-columns: 1fr 1fr;
+  padding-top: 68px;
+  position: relative; overflow: hidden;
+}
+.hero-left {
+  padding: 10vh 6vw 8vh 5vw;
+  display: flex; flex-direction: column; justify-content: center;
+  position: relative; z-index: 2;
+}
+.hero-eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--purple);
+  margin-bottom: 28px;
+  display: flex; align-items: center; gap: 12px;
+}
+.hero-eyebrow::after {
+  content: ''; display: block; width: 48px; height: 1px; background: var(--purple);
+}
+.hero-h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(44px, 5.5vw, 78px);
+  font-weight: 300; line-height: 1.08; color: var(--ink);
+  margin-bottom: 24px;
+}
+.hero-h1 em { font-style: italic; color: var(--purple); }
+.hero-sub {
+  font-size: 16px; font-weight: 300; line-height: 1.7;
+  color: var(--gray-mid); max-width: 440px;
+  margin-bottom: 36px;
+}
+.hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; }
+
+/* credential badges */
+.hero-credentials {
+  display: flex; flex-wrap: wrap; gap: 10px;
+}
+.cred-badge {
+  display: flex; align-items: center; gap: 7px;
+  font-family: 'Space Mono', monospace;
+  font-size: 8.5px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gray-mid);
+  border: 1px solid rgba(107,45,139,0.2);
+  padding: 6px 12px;
+  background: rgba(107,45,139,0.03);
+}
+.cred-badge::before {
+  content: '✦'; color: var(--purple); font-size: 8px;
+}
+
+.btn-primary {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; text-decoration: none;
+  color: var(--white); background: var(--purple);
+  padding: 14px 32px; display: inline-block;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-primary:hover { background: var(--purple-deep); transform: translateY(-1px); }
+.btn-outline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; text-decoration: none;
+  color: var(--purple); border: 1.5px solid var(--purple);
+  padding: 14px 32px; display: inline-block;
+  transition: all 0.2s;
+}
+.btn-outline:hover { background: var(--purple); color: var(--white); }
+
+/* orbit visualization */
+.hero-right {
+  position: relative; display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #F4F2F7 0%, #EDE8F5 100%);
+  overflow: hidden;
+}
+.orbit-diagram { position: relative; width: 380px; height: 380px; }
+.orbit-core {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  width: 90px; height: 90px;
+  background: var(--purple); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 0 0 16px rgba(107,45,139,0.08), 0 0 0 32px rgba(107,45,139,0.04);
+  z-index: 10;
+}
+.orbit-core-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px; color: white; text-align: center; line-height: 1.2; font-weight: 600;
+}
+.orbit-ring {
+  position: absolute; top: 50%; left: 50%;
+  border-radius: 50%;
+  border: 1px solid rgba(107,45,139,0.2);
+  transform: translate(-50%, -50%);
+  animation: spin linear infinite;
+}
+.orbit-ring:nth-child(2) { width: 180px; height: 180px; animation-duration: 14s; }
+.orbit-ring:nth-child(3) { width: 280px; height: 280px; animation-duration: 22s; animation-direction: reverse; }
+.orbit-ring:nth-child(4) { width: 370px; height: 370px; animation-duration: 34s; }
+@keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+.orbit-node {
+  position: absolute; width: 44px; height: 44px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Space Mono', monospace;
+  font-size: 7px; text-align: center; line-height: 1.3;
+  color: white; font-weight: 400;
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+.n1 { background: var(--orbit-teal); top: calc(50% - 90px - 22px); left: calc(50% - 22px); }
+.n2 { background: var(--orbit-gold); top: calc(50% - 22px); left: calc(50% + 90px - 22px); }
+.n3 { background: var(--purple-light); top: calc(50% + 90px - 22px); left: calc(50% - 22px); }
+.n4 { background: var(--gray-dark); top: calc(50% - 140px - 22px); left: calc(50% + 70px - 22px); }
+.n5 { background: var(--orbit-teal); top: calc(50% + 60px - 22px); left: calc(50% + 120px - 22px); }
+.n6 { background: var(--orbit-gold); top: calc(50% + 110px - 22px); left: calc(50% - 90px - 22px); }
+.n7 { background: var(--purple); top: calc(50% - 100px - 22px); left: calc(50% - 130px - 22px); }
+
+/* ─── STATS TICKER ─── */
+.stats-band {
+  background: var(--purple);
+  padding: 0;
+  overflow: hidden;
+}
+.stats-ticker {
+  display: flex; align-items: stretch;
+}
+.stat-item {
+  flex: 1; text-align: center;
+  padding: 28px 24px;
+  border-right: 1px solid rgba(255,255,255,0.12);
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+}
+.stat-item:last-child { border-right: none; }
+.stat-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 300; color: white; line-height: 1;
+}
+.stat-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+}
+
+/* ─── SECTION WRAPPER ─── */
+section { padding: 100px 5vw; }
+.section-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--purple);
+  margin-bottom: 16px;
+  display: flex; align-items: center; gap: 10px;
+}
+.section-label::before {
+  content: ''; display: block; width: 32px; height: 1px; background: var(--purple);
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 3.5vw, 54px);
+  font-weight: 300; line-height: 1.1; color: var(--ink);
+  margin-bottom: 20px;
+}
+.section-title em { font-style: italic; color: var(--purple); }
+.section-intro {
+  font-size: 16px; font-weight: 300; line-height: 1.75;
+  color: var(--gray-mid); max-width: 560px; margin-bottom: 60px;
+}
+
+/* ─── PHILOSOPHY BAND ─── */
+#philosophy { background: var(--ink); padding: 80px 5vw; }
+.philosophy-inner {
+  display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: center;
+}
+.philosophy-label { color: rgba(255,255,255,0.4); }
+.philosophy-label::before { background: rgba(255,255,255,0.3); }
+.philosophy-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 3vw, 48px);
+  font-weight: 300; line-height: 1.15; color: white;
+}
+.philosophy-heading em { font-style: italic; color: var(--purple-light); }
+.philosophy-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(20px, 2.2vw, 30px);
+  font-style: italic; font-weight: 300;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.5; margin-bottom: 28px;
+  border-left: 2px solid var(--purple-light);
+  padding-left: 28px;
+}
+.philosophy-body {
+  font-size: 15px; font-weight: 300; line-height: 1.8;
+  color: rgba(255,255,255,0.55); max-width: 580px;
+  margin-bottom: 36px;
+}
+
+/* physics equation block */
+.equation-block {
+  background: rgba(107,45,139,0.12);
+  border: 1px solid rgba(155,77,202,0.2);
+  padding: 28px 32px;
+  margin-top: 8px;
+}
+.equation-display {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 3vw, 40px);
+  font-weight: 300; color: white; letter-spacing: 0.04em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.equation-display em { font-style: italic; color: var(--purple-light); }
+.equation-table {
+  width: 100%; border-collapse: collapse;
+  margin-top: 8px;
+}
+.equation-table th {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  padding: 8px 12px; text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.equation-table td {
+  font-size: 13px; font-weight: 300;
+  color: rgba(255,255,255,0.65);
+  padding: 9px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.equation-table td:first-child {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; color: var(--purple-light);
+  font-weight: 600; width: 40px;
+}
+
+/* ─── ORBIT SPECTRUM ─── */
+#orbit-spectrum { background: var(--gray-light); padding: 80px 5vw; }
+.spectrum-inner { max-width: 1100px; margin: 0 auto; }
+.spectrum-track {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 2px; margin-top: 48px;
+}
+.spectrum-state {
+  background: white; padding: 36px 28px;
+  position: relative; overflow: hidden;
+  transition: transform 0.25s;
+  cursor: default;
+}
+.spectrum-state:hover { transform: translateY(-3px); }
+.spectrum-icon {
+  font-size: 28px; margin-bottom: 16px; display: block;
+}
+.spectrum-range {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--purple); margin-bottom: 10px;
+}
+.spectrum-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 600; color: var(--ink);
+  margin-bottom: 12px;
+}
+.spectrum-desc {
+  font-size: 13px; font-weight: 300; line-height: 1.65; color: var(--gray-mid);
+}
+.spectrum-state.active-state {
+  background: var(--purple);
+}
+.spectrum-state.active-state .spectrum-range { color: rgba(255,255,255,0.55); }
+.spectrum-state.active-state .spectrum-name { color: white; }
+.spectrum-state.active-state .spectrum-desc { color: rgba(255,255,255,0.65); }
+.spectrum-bar {
+  display: flex; align-items: center; gap: 0;
+  margin-bottom: 48px; border: 1px solid var(--rule);
+  overflow: hidden;
+}
+.spectrum-bar-seg {
+  height: 8px; flex: 1;
+}
+.spectrum-bar-seg.s1 { background: #3D3D3D; }
+.spectrum-bar-seg.s2 { background: var(--orbit-gold); }
+.spectrum-bar-seg.s3 { background: var(--purple-light); }
+.spectrum-bar-seg.s4 { background: var(--orbit-teal); }
+.spectrum-bar-labels {
+  display: flex; justify-content: space-between;
+  margin-top: 6px; margin-bottom: 0;
+}
+.spectrum-bar-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px; letter-spacing: 0.1em; color: var(--gray-mid);
+}
+
+/* ─── SERVICES GRID ─── */
+#services { background: white; }
+.services-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+.service-card {
+  background: var(--gray-light); padding: 44px 36px;
+  position: relative; overflow: hidden;
+  cursor: default; transition: transform 0.25s;
+}
+.service-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 3px; background: var(--purple);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.3s;
+}
+.service-card:hover { transform: translateY(-4px); }
+.service-card:hover::before { transform: scaleX(1); }
+.service-icon { width: 48px; height: 48px; margin-bottom: 24px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+.service-code { font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--purple); margin-bottom: 12px; }
+.service-name { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; line-height: 1.2; color: var(--ink); margin-bottom: 16px; }
+.service-desc { font-size: 14px; font-weight: 300; line-height: 1.7; color: var(--gray-mid); margin-bottom: 24px; }
+.service-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--purple); background: rgba(107,45,139,0.07); padding: 4px 10px; }
+
+/* ─── DIGITAL TOOLS ─── */
+#digital-tools { background: var(--gray-light); }
+.tools-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.tools-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.tool-card {
+  padding: 28px 24px; background: white;
+  border: 1px solid rgba(107,45,139,0.12);
+  position: relative; overflow: hidden;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.tool-card:hover {
+  border-color: var(--purple);
+  box-shadow: 0 8px 32px rgba(107,45,139,0.08);
+}
+.tool-number { font-family: 'Space Mono', monospace; font-size: 32px; font-weight: 400; color: rgba(107,45,139,0.08); line-height: 1; margin-bottom: 16px; display: block; }
+.tool-name { font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); margin-bottom: 10px; }
+.tool-desc { font-size: 13px; font-weight: 300; line-height: 1.65; color: var(--gray-mid); margin-bottom: 14px; }
+.tool-features {
+  display: flex; flex-wrap: wrap; gap: 5px;
+  margin-bottom: 16px;
+}
+.tool-feature {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--purple); background: rgba(107,45,139,0.06);
+  padding: 3px 8px;
+}
+.tool-link {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; text-decoration: none;
+  color: var(--purple);
+  display: inline-flex; align-items: center; gap: 5px;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 2px;
+  transition: border-color 0.2s;
+}
+.tool-link:hover { border-color: var(--purple); }
+.tool-link::after { content: '↗'; font-size: 10px; }
+.tool-card.featured {
+  background: var(--purple); border-color: var(--purple);
+  grid-column: span 2;
+}
+.tool-card.featured .tool-number { color: rgba(255,255,255,0.1); }
+.tool-card.featured .tool-name { color: white; }
+.tool-card.featured .tool-desc { color: rgba(255,255,255,0.7); }
+.tool-card.featured .tool-feature { color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.12); }
+.tool-card.featured .tool-link { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.2); }
+.tool-card.featured .tool-link:hover { border-color: white; color: white; }
+.tool-bilingual {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'Space Mono', monospace;
+  font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-top: 8px;
+}
+.tool-bilingual::before { content: '🌐'; font-size: 10px; }
+
+/* ─── BOOK ─── */
+#book {
+  background: linear-gradient(135deg, var(--purple-deep) 0%, var(--purple) 100%);
+  padding: 100px 5vw;
+}
+.book-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.book-cover { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.book-endorsements {
+  display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+}
+.book-endorse-badge {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 5px 10px;
+  display: flex; align-items: center; gap: 5px;
+}
+.book-endorse-badge::before { content: '✦'; color: var(--orbit-gold); font-size: 8px; }
+.book-3d {
+  width: 220px; height: 290px;
+  background: white;
+  box-shadow: -8px 8px 0 rgba(0,0,0,0.15), -16px 16px 0 rgba(0,0,0,0.08);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+  padding: 32px 24px;
+}
+.book-3d::before {
+  content: ''; position: absolute; top: 0; bottom: 0; left: 0; width: 12px;
+  background: linear-gradient(to right, rgba(107,45,139,0.3), transparent);
+}
+.book-edition {
+  position: absolute; top: 14px; right: 14px;
+  font-family: 'Space Mono', monospace;
+  font-size: 7px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--purple); background: rgba(107,45,139,0.08);
+  padding: 3px 7px;
+}
+.book-3d-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; color: var(--purple); text-align: center; line-height: 1.15; margin-bottom: 10px; }
+.book-3d-orbit { font-family: 'Space Mono', monospace; font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gray-mid); margin-bottom: 20px; }
+.book-3d-divider { width: 40px; height: 1px; background: var(--purple); margin: 0 auto 20px; }
+.book-3d-author { font-family: 'Cormorant Garamond', serif; font-size: 14px; font-style: italic; color: var(--gray-dark); text-align: center; }
+.book-label { color: rgba(255,255,255,0.4); }
+.book-label::before { background: rgba(255,255,255,0.3); }
+.book-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 3.5vw, 52px); font-weight: 300; line-height: 1.1;
+  color: white; margin-bottom: 24px;
+}
+.book-title em { font-style: italic; color: rgba(255,255,255,0.55); }
+.book-body { font-size: 15px; font-weight: 300; line-height: 1.8; color: rgba(255,255,255,0.65); margin-bottom: 32px; max-width: 480px; }
+.book-chapters {
+  display: flex; flex-direction: column; gap: 0;
+  margin-bottom: 36px;
+}
+.book-chapter {
+  display: flex; align-items: baseline; gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.book-chapter:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+.book-chapter-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 300; color: rgba(255,255,255,0.2);
+  min-width: 28px; line-height: 1;
+}
+.book-chapter-name {
+  font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.75);
+}
+.book-chapter-sub {
+  font-size: 11px; font-weight: 300; color: rgba(255,255,255,0.35);
+  margin-left: auto;
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 0.05em;
+}
+.btn-white {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; text-decoration: none;
+  color: var(--purple); background: white;
+  padding: 14px 32px; display: inline-block;
+  transition: all 0.2s;
+}
+.btn-white:hover { background: var(--gray-light); transform: translateY(-1px); }
+
+/* ─── SOFT SKILLS ─── */
+#soft-skills { background: var(--gray-light); }
+.skills-masonry { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+.skill-brick { background: white; padding: 32px 28px; position: relative; transition: background 0.25s; }
+.skill-brick:hover { background: var(--purple); }
+.skill-brick:hover .skill-brick-num { color: rgba(255,255,255,0.15); }
+.skill-brick:hover .skill-brick-title { color: white; }
+.skill-brick:hover .skill-brick-desc { color: rgba(255,255,255,0.6); }
+.skill-brick-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: rgba(107,45,139,0.07); line-height: 1; margin-bottom: 16px; display: block; transition: color 0.25s; }
+.skill-brick-title { font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); margin-bottom: 10px; transition: color 0.25s; }
+.skill-brick-desc { font-size: 13px; font-weight: 300; line-height: 1.6; color: var(--gray-mid); transition: color 0.25s; }
+
+.about-body strong { font-weight: 600; color: var(--ink); }
+
+.book-goldsmith-pull {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(16px, 1.8vw, 22px);
+  font-style: italic; font-weight: 300;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.5;
+  margin: 8px 0 32px;
+  padding-left: 0;
+  border: none;
+}
+.book-goldsmith-pull .bgp-mark {
+  color: var(--orbit-gold); font-style: normal; font-weight: 400;
+}
+.book-goldsmith-pull cite {
+  display: block; margin-top: 8px;
+  font-style: normal;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+
+/* ─── GOLDSMITH ENDORSEMENT QUOTE ─── */
+.goldsmith-quote {
+  position: relative;
+  background: linear-gradient(135deg, rgba(107,45,139,0.04) 0%, rgba(196,146,42,0.04) 100%);
+  border: 1px solid rgba(107,45,139,0.12);
+  border-left: 3px solid var(--orbit-gold);
+  padding: 28px 32px 24px 32px;
+  margin: 8px 0 32px;
+}
+.goldsmith-quote-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 72px; line-height: 0.6;
+  color: var(--orbit-gold); opacity: 0.35;
+  margin-bottom: 10px;
+}
+.goldsmith-quote-body {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 2vw, 26px);
+  font-style: italic; font-weight: 300;
+  color: var(--ink); line-height: 1.45;
+  margin-bottom: 16px;
+}
+.goldsmith-attribution {
+  display: flex; flex-direction: column; gap: 2px;
+}
+.goldsmith-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--ink);
+}
+.goldsmith-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--orbit-gold);
+}
+
+/* ─── ABOUT ─── */
+#about { background: white; padding: 100px 5vw; }
+.about-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: center; }
+.orbit-acronym { display: flex; flex-direction: column; gap: 0; margin: 40px 0; }
+.orbit-letter-row { display: flex; align-items: baseline; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--rule); }
+.orbit-letter-row:first-child { border-top: 1px solid var(--rule); }
+.orbit-big-letter { font-family: 'Cormorant Garamond', serif; font-size: 52px; font-weight: 300; color: var(--purple); line-height: 1; min-width: 44px; }
+.orbit-word { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); min-width: 140px; }
+.orbit-meaning { font-size: 14px; font-weight: 300; line-height: 1.6; color: var(--gray-mid); }
+.about-statement { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 2.5vw, 36px); font-style: italic; font-weight: 300; line-height: 1.4; color: var(--ink); margin-bottom: 28px; }
+.about-body { font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--gray-mid); margin-bottom: 24px; }
+.bpc-strip {
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 20px;
+  background: var(--gray-light);
+  border-left: 3px solid var(--purple);
+  margin: 32px 0;
+}
+.bpc-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--purple);
+}
+.bpc-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; font-weight: 600; color: var(--ink);
+}
+.bpc-creds {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px;
+}
+.bpc-cred {
+  font-family: 'Space Mono', monospace;
+  font-size: 7.5px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--gray-mid);
+}
+.about-meta { display: flex; flex-direction: column; gap: 10px; margin-top: 40px; }
+.meta-line { display: flex; align-items: center; gap: 14px; font-size: 14px; color: var(--gray-mid); }
+.meta-line svg { flex-shrink: 0; color: var(--purple); }
+.meta-line a { color: var(--purple); text-decoration: none; }
+.meta-line a:hover { text-decoration: underline; }
+
+/* ─── CONTACT ─── */
+#contact { background: var(--ink); padding: 100px 5vw; }
+.contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+.contact-label { color: rgba(255,255,255,0.35); }
+.contact-label::before { background: rgba(255,255,255,0.25); }
+.contact-heading { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 3.5vw, 52px); font-weight: 300; line-height: 1.1; color: white; margin-bottom: 24px; }
+.contact-heading em { font-style: italic; color: var(--purple-light); }
+.contact-body { font-size: 15px; font-weight: 300; line-height: 1.8; color: rgba(255,255,255,0.5); max-width: 420px; margin-bottom: 48px; }
+.contact-details { display: flex; flex-direction: column; gap: 20px; }
+.contact-item { display: flex; gap: 16px; align-items: flex-start; }
+.contact-icon { width: 36px; height: 36px; background: rgba(107,45,139,0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.contact-text { display: flex; flex-direction: column; gap: 2px; }
+.contact-text-label { font-family: 'Space Mono', monospace; font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+.contact-text-value { font-size: 14px; color: rgba(255,255,255,0.75); font-weight: 300; }
+.contact-text-value a { color: var(--purple-light); text-decoration: none; }
+.contact-text-value a:hover { text-decoration: underline; }
+.contact-form { display: flex; flex-direction: column; gap: 16px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-family: 'Space Mono', monospace; font-size: 8px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.35); }
+.form-group input, .form-group textarea, .form-group select {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+  color: white; padding: 12px 16px;
+  font-family: 'Barlow', sans-serif; font-size: 14px; font-weight: 300;
+  outline: none; transition: border-color 0.2s; resize: none;
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--purple-light); }
+.form-group textarea { min-height: 120px; }
+.form-group select { cursor: pointer; }
+.form-group select option { background: var(--ink); }
+.btn-submit {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: white; background: var(--purple);
+  padding: 16px 36px; border: none; cursor: pointer;
+  margin-top: 8px; align-self: flex-start;
+  transition: background 0.2s;
+}
+.btn-submit:hover { background: var(--purple-light); }
+.btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* ─── FOOTER ─── */
+footer {
+  background: #0F0F0F; padding: 36px 5vw;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-copy { font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.25); }
+.footer-tag { font-family: 'Cormorant Garamond', serif; font-size: 14px; font-style: italic; color: rgba(255,255,255,0.25); }
+
+/* ─── SCROLL REVEAL ─── */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  #hero { grid-template-columns: 1fr; }
+  .hero-right { min-height: 40vh; }
+  .philosophy-inner, .tools-layout, .book-layout, .about-layout, .contact-layout { grid-template-columns: 1fr; gap: 48px; }
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .skills-masonry { grid-template-columns: 1fr 1fr; }
+  .spectrum-track { grid-template-columns: 1fr 1fr; }
+  .stats-ticker { flex-wrap: wrap; }
+  .stat-item { flex: 1 1 40%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.12); }
+}
+@media (max-width: 640px) {
+  nav { padding: 0 4vw; }
+  .nav-links { display: none; }
+  section { padding: 70px 5vw; }
+  .services-grid, .skills-masonry { grid-template-columns: 1fr; }
+  .tools-grid { grid-template-columns: 1fr; }
+  .tool-card.featured { grid-column: span 1; }
+  .form-row { grid-template-columns: 1fr; }
+  .orbit-diagram { width: 280px; height: 280px; }
+  footer { flex-direction: column; gap: 12px; text-align: center; }
+  .spectrum-track { grid-template-columns: 1fr; }
+  .stat-item { flex: 1 1 100%; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <svg class="logo-mark" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="MadarLead orbit mark">
+      <ellipse cx="20" cy="20" rx="17" ry="10" stroke="#6B2D8B" stroke-width="1.3" transform="rotate(-15 20 20)"/>
+      <circle cx="20" cy="20" r="5" fill="#6B2D8B"/>
+      <circle cx="36.4" cy="15.6" r="2.8" fill="#6B2D8B"/>
+    </svg>
+    <div class="logo-type">
+      <div class="logo-name">
+        <span class="logo-n-madar">MADAR</span><span class="logo-n-lead">LEAD</span>
+      </div>
+      <div class="logo-descriptor">Business Psychology Center</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#digital-tools">Digital Tools</a></li>
+    <li><a href="#book">Book</a></li>
+    <li><a href="#soft-skills">Programs</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Enquire</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Business Psychology Center · Amman</p>
+    <h1 class="hero-h1">
+      Leadership that<br>
+      <em>escapes gravity</em><br>
+      and enters orbit
+    </h1>
+    <p class="hero-sub">
+      MadarLead translates the science of human behavior into precision training, coaching, and digital tools — built for leaders, sales professionals, and teams ready to operate at a higher altitude.
+    </p>
+    <div class="hero-ctas">
+      <a href="#services" class="btn-primary">Explore Services</a>
+      <a href="#book" class="btn-outline">The Antigravity Book</a>
+    </div>
+    <div class="hero-credentials">
+      <span class="cred-badge">25 Years Experience</span>
+      <span class="cred-badge">Marshall Goldsmith Endorsed</span>
+      <span class="cred-badge">AIOBP Accredited</span>
+      <span class="cred-badge">Kirkus Reviews</span>
+      <span class="cred-badge">Accredited Senior Mentor IAPCM</span>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="orbit-diagram">
+      <div class="orbit-ring"></div>
+      <div class="orbit-ring"></div>
+      <div class="orbit-ring"></div>
+      <div class="orbit-core">
+        <div class="orbit-core-text">Self<br>Aware<br>Leader</div>
+      </div>
+      <div class="orbit-node n1">Gravity<br>Audit</div>
+      <div class="orbit-node n2">SPIN<br>Selling</div>
+      <div class="orbit-node n3">KAM</div>
+      <div class="orbit-node n4">GROW<br>Model</div>
+      <div class="orbit-node n5">Verbal<br>Mirror</div>
+      <div class="orbit-node n6">Social<br>Style</div>
+      <div class="orbit-node n7">Data→<br>Action</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<div class="stats-band">
+  <div class="stats-ticker">
+    <div class="stat-item">
+      <span class="stat-number">95%</span>
+      <span class="stat-label">of behaviour is automatic</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">10+</span>
+      <span class="stat-label">years of research synthesised</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">5</span>
+      <span class="stat-label">disciplines unified in one framework</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">6</span>
+      <span class="stat-label">gravitational distortion mechanisms</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">2nd</span>
+      <span class="stat-label">edition · 2026</span>
+    </div>
+  </div>
+</div>
+
+<!-- PHILOSOPHY BAND -->
+<div id="philosophy">
+  <div class="philosophy-inner">
+    <div>
+      <p class="section-label philosophy-label">Our Foundation</p>
+      <h2 class="philosophy-heading">
+        Behavior is not<br>random.<br>
+        <em>It follows laws.</em>
+      </h2>
+    </div>
+    <div class="philosophy-right">
+      <p class="philosophy-quote">
+        "Effective leaders don't lose their judgment because they lack skill or courage — they lose it because invisible psychological forces pull them into reactive, automatic behavior below the level of conscious awareness."
+      </p>
+      <p class="philosophy-body">
+        Newton's law of universal gravitation — F = G × M₁M₂ / d² — maps the hidden forces pulling you from your true self with mathematical precision. Psychological mass, environmental proximity, gravitational force. The metaphor is not decorative: it is structurally precise. And it produces a working model for sustainable change.
+      </p>
+      <div class="equation-block">
+        <div class="equation-display"><em>F</em> = G × (M₁ × M₂) / d²</div>
+        <table class="equation-table">
+          <thead>
+            <tr><th>Symbol</th><th>In Physics</th><th>In Psychology</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>F</td><td>Gravitational force</td><td>The pull of unconscious, mechanical behaviour</td></tr>
+            <tr><td>G</td><td>Universal constant</td><td>The quiet law governing all human interaction</td></tr>
+            <tr><td>M</td><td>Mass of bodies</td><td>Identifications, habits, and attachments</td></tr>
+            <tr><td>d</td><td>Distance between bodies</td><td>Proximity to environmental triggers</td></tr>
+            <tr><td>∴</td><td>Orbit</td><td>Authentic selfhood — neither falling nor drifting</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ORBIT SPECTRUM -->
+<div id="orbit-spectrum">
+  <div class="spectrum-inner">
+    <p class="section-label reveal">The Orbit Spectrum</p>
+    <h2 class="section-title reveal">Where are you <em>right now?</em></h2>
+    <p class="section-intro reveal" style="margin-bottom: 32px;">Antigravity maps four distinct states of being — from complete mechanical absorption to conscious, balanced selfhood. Every person exists somewhere on this spectrum at any given moment. Awareness of your position is the first act of antigravity.</p>
+
+    <div class="spectrum-bar">
+      <div class="spectrum-bar-seg s1"></div>
+      <div class="spectrum-bar-seg s2"></div>
+      <div class="spectrum-bar-seg s3"></div>
+      <div class="spectrum-bar-seg s4"></div>
+    </div>
+    <div class="spectrum-bar-labels">
+      <span class="spectrum-bar-label">0 — Free Fall</span>
+      <span class="spectrum-bar-label">26 — Falling</span>
+      <span class="spectrum-bar-label">51 — Approaching</span>
+      <span class="spectrum-bar-label">76 — In Orbit — 100</span>
+    </div>
+
+    <div class="spectrum-track" style="margin-top: 24px;">
+      <div class="spectrum-state reveal">
+        <span class="spectrum-icon">🌍</span>
+        <p class="spectrum-range">Score 0 – 25</p>
+        <div class="spectrum-name">Free Fall</div>
+        <p class="spectrum-desc">Fully absorbed in mechanical, automatic patterns. The environment is running you. Habits are indistinguishable from identity.</p>
+      </div>
+      <div class="spectrum-state reveal">
+        <span class="spectrum-icon">↓</span>
+        <p class="spectrum-range">Score 26 – 50</p>
+        <div class="spectrum-name">Falling</div>
+        <p class="spectrum-desc">Gravitational pull is dominant. Some moments of awareness — but they don't yet interrupt the patterns. Drifting toward earth.</p>
+      </div>
+      <div class="spectrum-state reveal">
+        <span class="spectrum-icon">↑</span>
+        <p class="spectrum-range">Score 51 – 75</p>
+        <div class="spectrum-name">Approaching</div>
+        <p class="spectrum-desc">Awareness is growing. You can observe patterns before or during them. Antigravity practice has taken root. Orbit is within reach.</p>
+      </div>
+      <div class="spectrum-state active-state reveal">
+        <span class="spectrum-icon">🌙</span>
+        <p class="spectrum-range">Score 76 – 100</p>
+        <div class="spectrum-name">In Orbit</div>
+        <p class="spectrum-desc">Neither falling nor drifting. Authentic, conscious, balanced. You respond rather than react. This is the stable orbit of your true self.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <p class="section-label reveal">What We Offer</p>
+  <h2 class="section-title reveal">Training &amp; <em>Consultation</em></h2>
+  <p class="section-intro reveal">Purpose-designed programs for commercial teams, leaders, and organizations navigating change.</p>
+
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-icon">🧠</div>
+      <p class="service-code">SVC — 01</p>
+      <h3 class="service-name">Leadership Development</h3>
+      <p class="service-desc">Deploying the Antigravity Framework to identify and interrupt the six distortion mechanisms that derail leader judgment — from authority dependency to entitlement distortion. Built on neuroscience, behavioral psychology, and field-tested diagnostics.</p>
+      <div class="service-tags">
+        <span class="tag">Antigravity Model</span>
+        <span class="tag">Distortion Mapping</span>
+        <span class="tag">GROW Coaching</span>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon">💼</div>
+      <p class="service-code">SVC — 02</p>
+      <h3 class="service-name">Commercial Sales Training</h3>
+      <p class="service-desc">Combining SPIN Selling, prospect theory, loss aversion, and social style adaptation into one integrated capability system. Designed for pharmaceutical and commercial sales teams who need precision, not just motivation.</p>
+      <div class="service-tags">
+        <span class="tag">SPIN Selling</span>
+        <span class="tag">Prospect Theory</span>
+        <span class="tag">Closing Mastery</span>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon">🗂️</div>
+      <p class="service-code">SVC — 03</p>
+      <h3 class="service-name">Key Account Management</h3>
+      <p class="service-desc">Strategic KAM methodology for complex multi-stakeholder environments. Includes stakeholder power mapping, account segmentation, and value-based engagement blueprints — grounded in real commercial data and territory analytics.</p>
+      <div class="service-tags">
+        <span class="tag">Stakeholder Mapping</span>
+        <span class="tag">Account Strategy</span>
+        <span class="tag">Value Selling</span>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon">🔍</div>
+      <p class="service-code">SVC — 04</p>
+      <h3 class="service-name">Cognitive Bias Training</h3>
+      <p class="service-desc">Structured programs that decode how fast-brain shortcuts distort decisions in sales, leadership, and coaching. Includes prospect theory, anchoring, confirmation bias, and the Bat &amp; Ball principle — translated into field-applicable interventions.</p>
+      <div class="service-tags">
+        <span class="tag">System 1 / 2</span>
+        <span class="tag">Decision Science</span>
+        <span class="tag">Behavioral Change</span>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon">🤝</div>
+      <p class="service-code">SVC — 05</p>
+      <h3 class="service-name">Team Integration Coaching</h3>
+      <p class="service-desc">Structured GROW-model facilitation for teams in transition — merger of units, new leadership, or culture shifts. Includes team diagnostic, individual social style mapping, and a cohesion roadmap with measurable milestones.</p>
+      <div class="service-tags">
+        <span class="tag">GROW Model</span>
+        <span class="tag">Social Styles</span>
+        <span class="tag">Change Navigation</span>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon">📊</div>
+      <p class="service-code">SVC — 06</p>
+      <h3 class="service-name">Business Planning &amp; Analytics</h3>
+      <p class="service-desc">Translating raw market numbers into strategic decision frameworks. Data-to-Actions methodology that builds analytical fluency in commercial teams — from market sizing to territory prioritization to business plan presentation.</p>
+      <div class="service-tags">
+        <span class="tag">Data to Actions</span>
+        <span class="tag">Territory Analytics</span>
+        <span class="tag">Business Planning</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIGITAL TOOLS -->
+<section id="digital-tools">
+  <div class="tools-layout">
+    <div class="tools-intro-col">
+      <p class="section-label reveal">Digital Platforms</p>
+      <h2 class="section-title reveal">Tools That<br><em>Think With You</em></h2>
+      <p class="section-intro reveal" style="margin-bottom: 0;">
+        MadarLead's digital ecosystem translates complex behavioral frameworks into interactive tools — fully bilingual (English / Arabic), no account required, built for practitioners who want insight without waiting for a workshop.
+      </p>
+    </div>
+    <div class="tools-grid">
+
+      <div class="tool-card featured reveal">
+        <span class="tool-number">01</span>
+        <div class="tool-name">ORBIT — Antigravity Platform</div>
+        <p class="tool-desc">The flagship habit and pattern intelligence hub built on the Antigravity Leadership Framework. Take the Gravity Audit to map your dominant psychological forces. Capture moments in real time. Track which of the 6 Inner Personas keeps showing up. Everything connects — your audit shapes your journal, your captures build your pattern map.</p>
+        <div class="tool-features">
+          <span class="tool-feature">Gravity Audit</span>
+          <span class="tool-feature">Habit Mapping</span>
+          <span class="tool-feature">Moment Capture</span>
+          <span class="tool-feature">6 Inner Personas</span>
+          <span class="tool-feature">Pattern Dashboard</span>
+          <span class="tool-feature">Moon Meter</span>
+          <span class="tool-feature">Evening Journal</span>
+        </div>
+        <a href="https://final-antigrvaity-orbit.netlify.app/orbit" target="_blank" class="tool-link">Open ORBIT App</a>
+        <div class="tool-bilingual">Bilingual EN / عربي · No account · No setup</div>
+      </div>
+
+      <div class="tool-card reveal">
+        <span class="tool-number">02</span>
+        <div class="tool-name">Verbal Mirror</div>
+        <p class="tool-desc">Speak or type about any situation. Voice acoustics — pitch, pace, hesitations — are measured alongside language patterns to reveal what your words alone conceal: a Gravity Score, Mask Score™, and a Voice Letter written in your own linguistic fingerprint.</p>
+        <div class="tool-features">
+          <span class="tool-feature">Voice Acoustics</span>
+          <span class="tool-feature">Gravity Score</span>
+          <span class="tool-feature">Mask Score™</span>
+          <span class="tool-feature">Voice Letter</span>
+          <span class="tool-feature">Rapport Intelligence</span>
+        </div>
+        <a href="https://final-antigrvaity-orbit.netlify.app/verbal-mirror" target="_blank" class="tool-link">Open Verbal Mirror</a>
+      </div>
+
+      <div class="tool-card reveal">
+        <span class="tool-number">03</span>
+        <div class="tool-name">Digital Social Style</div>
+        <p class="tool-desc">An interactive self-assessment platform identifying your social style profile (Driver, Expressive, Amiable, Analytical) and generating adaptive communication strategies for each interaction type.</p>
+        <div class="tool-features">
+          <span class="tool-feature">4 Style Profiles</span>
+          <span class="tool-feature">Adaptive Comms</span>
+        </div>
+      </div>
+
+      <div class="tool-card reveal">
+        <span class="tool-number">04</span>
+        <div class="tool-name">Data to Actions</div>
+        <p class="tool-desc">A commercial intelligence tool that transforms raw territory data into prioritized action sequences — closing the gap between analytical insight and field execution.</p>
+        <div class="tool-features">
+          <span class="tool-feature">Territory Analytics</span>
+          <span class="tool-feature">Priority Logic</span>
+        </div>
+      </div>
+
+      <div class="tool-card reveal">
+        <span class="tool-number">05</span>
+        <div class="tool-name">Task Intelligence</div>
+        <p class="tool-desc">A behavioral task management system that layers psychological priority logic onto execution planning — designed for leaders who want structure without rigidity.</p>
+        <div class="tool-features">
+          <span class="tool-feature">Behavioral Logic</span>
+          <span class="tool-feature">Execution Planning</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BOOK -->
+<section id="book">
+  <div class="book-layout">
+    <div class="book-cover">
+      <div class="book-3d">
+        <span class="book-edition">2nd Ed. · 2026</span>
+        <div class="book-3d-title">ANTI<br>GRAVITY</div>
+        <div class="book-3d-orbit">— Leadership in Orbit —</div>
+        <div class="book-3d-divider"></div>
+        <div class="book-3d-author">Shadi Shafiq Obeidat</div>
+      </div>
+      <div class="book-endorsements">
+        <span class="book-endorse-badge">Marshall Goldsmith Endorsed</span>
+        <span class="book-endorse-badge">AIOBP Accredited</span>
+        <span class="book-endorse-badge">Kirkus Reviews</span>
+        <span class="book-endorse-badge">Accredited Senior Mentor IAPCM</span>
+      </div>
+    </div>
+    <div class="book-right">
+      <p class="section-label book-label">The Book · Second Edition 2026</p>
+      <h2 class="book-title">
+        The framework<br>that started<br><em>everything</em>
+      </h2>
+      <p class="book-body">
+        Antigravity applies Newton's universal law of gravitation to the interior life — mapping with mathematical precision why people stay stuck, react automatically, and drift from who they truly are. Not a willpower problem. A physics problem. Endorsed by Marshall Goldsmith (World's #1 Executive Coach) and reviewed by Kirkus Reviews — the framework that maps six distortion mechanisms and offers a four-stage Transformation Loop across six integrated sections.
+      </p>
+      <div class="book-chapters">
+        <div class="book-chapter">
+          <span class="book-chapter-num">I</span>
+          <span class="book-chapter-name">The Gravitational Law — the equation applied to human behaviour</span>
+        </div>
+        <div class="book-chapter">
+          <span class="book-chapter-num">II</span>
+          <span class="book-chapter-name">Gravitational Forces — body, emotions, thoughts, personality</span>
+        </div>
+        <div class="book-chapter">
+          <span class="book-chapter-num">III</span>
+          <span class="book-chapter-name">The Antigravity Tools — journal, interruption, ego opposition</span>
+        </div>
+        <div class="book-chapter">
+          <span class="book-chapter-num">IV</span>
+          <span class="book-chapter-name">Antigravity in Business — leadership, teams, organisational gravity</span>
+        </div>
+        <div class="book-chapter">
+          <span class="book-chapter-num">V</span>
+          <span class="book-chapter-name">The Spiritual Layer — six traditions, one truth</span>
+        </div>
+        <div class="book-chapter">
+          <span class="book-chapter-num">VI</span>
+          <span class="book-chapter-name">The Four-Week Programme — structured personal transformation</span>
+        </div>
+      </div>
+      <blockquote class="book-goldsmith-pull">
+        <span class="bgp-mark">"</span>The insights in Antigravity are unique and rare!<span class="bgp-mark">"</span>
+        <cite>— Marshall Goldsmith, World's #1 Executive Coach</cite>
+      </blockquote>
+      <a href="#contact" class="btn-white">Order Your Copy</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOFT SKILLS -->
+<section id="soft-skills">
+  <p class="section-label reveal">Capability Programs</p>
+  <h2 class="section-title reveal">Precision <em>Soft-Skills</em><br>for High-Stakes Contexts</h2>
+  <p class="section-intro reveal">Each program is a standalone module — or combinable into a full capability architecture for your team.</p>
+
+  <div class="skills-masonry">
+    <div class="skill-brick reveal">
+      <span class="skill-brick-num">01</span>
+      <div class="skill-brick-title">Enneagram Coaching</div>
+      <p class="skill-brick-desc">Type-based personality profiling for leaders and teams. Goes beyond self-awareness into motivation mapping, stress response, and developmental edges.</p>
+    </div>
+    <div class="skill-brick reveal">
+      <span class="skill-brick-num">02</span>
+      <div class="skill-brick-title">Tactical Empathy</div>
+      <p class="skill-brick-desc">Drawn from negotiation science — mirroring, labeling, calibrated questioning — applied to sales conversations, leadership, and team dynamics.</p>
+    </div>
+    <div class="skill-brick reveal">
+      <span class="skill-brick-num">03</span>
+      <div class="skill-brick-title">SPIN Selling Mastery</div>
+      <p class="skill-brick-desc">The full Situation–Problem–Implication–Need-Payoff methodology, rebuilt for complex B2B and pharma sales environments with live coaching integration.</p>
+    </div>
+    <div class="skill-brick reveal">
+      <span class="skill-brick-num">04</span>
+      <div class="skill-brick-title">Chunking &amp; Communication</div>
+      <p class="skill-brick-desc">How to structure ideas into digestible layers — for training delivery, executive presentations, and behavior change interventions.</p>
+    </div>
+    <div class="skill-brick reveal">
+      <span class="skill-brick-num">05</span>
+      <div class="skill-brick-title">Rewards Management</div>
+      <p class="skill-brick-desc">Designing incentive structures that align with motivational psychology — avoiding perverse incentives and building sustainable performance cultures.</p>
+    </div>
+    <div class="skill-brick reveal">
+      <span class="skill-brick-num">06</span>
+      <div class="skill-brick-title">Mindfulness as Force</div>
+      <p class="skill-brick-desc">Not wellness theater — but mindfulness as the neurological counterforce to automatic reactive behavior. Applied to sales pausing, leadership presence, and decision quality.</p>
+    </div>
+    <div class="skill-brick reveal">
+      <span class="skill-brick-num">07</span>
+      <div class="skill-brick-title">Feedback &amp; Coaching Culture</div>
+      <p class="skill-brick-desc">Building the internal infrastructure for continuous improvement — psychological safety, growth mindset framing, and GROW-based coaching conversations.</p>
+    </div>
+    <div class="skill-brick reveal">
+      <span class="skill-brick-num">08</span>
+      <div class="skill-brick-title">Analytical Thinking</div>
+      <p class="skill-brick-desc">Decision-making with real numbers. Market share math, territory segmentation logic, and structured reasoning that separates instinct from intelligence.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / MADAR MEANING -->
+<section id="about">
+  <div class="about-layout">
+    <div class="about-left reveal">
+      <p class="section-label">The Name</p>
+      <h2 class="section-title">What does<br><em>Madar</em> mean?</h2>
+
+      <div class="orbit-acronym">
+        <div class="orbit-letter-row">
+          <span class="orbit-big-letter">M</span>
+          <span class="orbit-word">Mindful</span>
+          <span class="orbit-meaning">Conscious presence as the foundation of all effective leadership and persuasion</span>
+        </div>
+        <div class="orbit-letter-row">
+          <span class="orbit-big-letter">A</span>
+          <span class="orbit-word">Altitude</span>
+          <span class="orbit-meaning">Operating above reactive, automatic behavior — the defining quality of orbit</span>
+        </div>
+        <div class="orbit-letter-row">
+          <span class="orbit-big-letter">D</span>
+          <span class="orbit-word">Direction</span>
+          <span class="orbit-meaning">Every program is purpose-calibrated — tool in service of measurable outcome</span>
+        </div>
+        <div class="orbit-letter-row">
+          <span class="orbit-big-letter">A</span>
+          <span class="orbit-word">Awareness</span>
+          <span class="orbit-meaning">Self-knowledge as competitive advantage — the Antigravity core proposition</span>
+        </div>
+        <div class="orbit-letter-row">
+          <span class="orbit-big-letter">R</span>
+          <span class="orbit-word">Resonance</span>
+          <span class="orbit-meaning">Communication that lands — behaviorally precise, emotionally intelligent</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-right reveal">
+      <p class="about-statement">
+        "Madar (مدار) is the Arabic word for orbit. It is also the metaphor at the heart of everything we do."
+      </p>
+      <p class="about-body">
+        In physics, orbit is not free-fall — it is the precise balance between forward momentum and gravitational pull. Leaders who achieve orbit are not free from pressure. They have learned to use it. MadarLead exists to design that trajectory — for individuals, teams, and organizations.
+      </p>
+      <p class="about-body">
+        Founded by <strong>Shadi Shafiq Obeidat</strong> — Author, Coach and Behavioral Psychology Expert with 25 years of experience across pharma sales, leadership development, and organizational psychology in multiple geographies. Accredited Senior Mentor (IAPCM) and creator of the Antigravity Leadership Framework, Shadi unifies neuroscience, Enneagram coaching, practical commercial methodology, and behavioral psychology into a single coherent development philosophy.
+      </p>
+
+      <div class="goldsmith-quote">
+        <div class="goldsmith-quote-mark">"</div>
+        <div class="goldsmith-quote-body">The insights in Antigravity are unique and rare!</div>
+        <div class="goldsmith-attribution">
+          <span class="goldsmith-name">Marshall Goldsmith</span>
+          <span class="goldsmith-title">World's #1 Executive Coach</span>
+        </div>
+      </div>
+
+      <div class="bpc-strip">
+        <div>
+          <div class="bpc-label">Home of the Antigravity Book</div>
+          <div class="bpc-name">Business Psychology Center</div>
+          <div class="bpc-creds">
+            <span class="bpc-cred">AIOBP Accredited</span>
+            <span class="bpc-cred">·</span>
+            <span class="bpc-cred">Accredited Senior Mentor IAPCM</span>
+            <span class="bpc-cred">·</span>
+            <span class="bpc-cred">Kirkus Reviews</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-meta">
+        <div class="meta-line">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Amman, Jordan — Amer Ben Malek Street
+        </div>
+        <div class="meta-line">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 10.77 19.79 19.79 0 01.21 2.18 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92v2z"/></svg>
+          <a href="tel:+962798506400">+962 79 850 6400</a>
+        </div>
+        <div class="meta-line">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:shadi@psychologytobusiness.com">shadi@psychologytobusiness.com</a>
+        </div>
+        <div class="meta-line">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <a href="https://shobeidat.com" target="_blank" rel="noopener">shobeidat.com — Personal site &amp; articles</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-layout">
+    <div class="contact-left">
+      <p class="section-label contact-label">Get In Touch</p>
+      <h2 class="contact-heading">Start the<br><em>conversation</em></h2>
+      <p class="contact-body">
+        Whether you're building a training architecture, exploring consultation, requesting the Antigravity book, or accessing the ORBIT and Verbal Mirror apps — we respond with precision, not templates.
+      </p>
+      <p class="contact-body" style="margin-bottom: 0; font-size: 13px; color: rgba(255,255,255,0.35);">
+        For Shadi's articles, coaching work, and personal writing, visit
+        <a href="https://shobeidat.com" target="_blank" rel="noopener" style="color: var(--purple-light);">shobeidat.com</a>
+      </p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div class="contact-text">
+            <span class="contact-text-label">Location</span>
+            <span class="contact-text-value">Amer Ben Malek Street, Amman, Jordan</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 10.77 19.79 19.79 0 01.21 2.18 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92v2z"/></svg>
+          </div>
+          <div class="contact-text">
+            <span class="contact-text-label">Mobile</span>
+            <span class="contact-text-value"><a href="tel:+962798506400">+962 79 850 6400</a></span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-text">
+            <span class="contact-text-label">Email</span>
+            <span class="contact-text-value"><a href="mailto:shadi@psychologytobusiness.com">shadi@psychologytobusiness.com</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-right">
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name *</label>
+            <input type="text" id="fname" placeholder="Shadi">
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="Obeidat">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" placeholder="you@company.com">
+        </div>
+        <div class="form-group">
+          <label for="org">Organization</label>
+          <input type="text" id="org" placeholder="Company / Institution">
+        </div>
+        <div class="form-group">
+          <label for="interest">Area of Interest</label>
+          <select id="interest">
+            <option value="" disabled selected>Select a program or service</option>
+            <option>ORBIT — Antigravity Platform</option>
+            <option>Verbal Mirror Tool</option>
+            <option>Leadership Development Program</option>
+            <option>Commercial Sales Training</option>
+            <option>Key Account Management</option>
+            <option>Cognitive Bias Training</option>
+            <option>Team Integration Coaching</option>
+            <option>Digital Social Style Assessment</option>
+            <option>The Antigravity Book (2nd Ed. 2026)</option>
+            <option>Enneagram Coaching</option>
+            <option>Custom Consultation</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="msg">Your Message</label>
+          <textarea id="msg" placeholder="Tell us about your team, challenge, or objective..."></textarea>
+        </div>
+        <button class="btn-submit" id="submitBtn" onclick="handleSubmit()">Send Enquiry</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-copy">© 2026 MadarLead · Business Psychology Center · Shadi Shafiq Obeidat · Amman, Jordan · <a href="https://shobeidat.com" target="_blank" style="color:rgba(255,255,255,0.35); text-decoration:none;">shobeidat.com</a></span>
+  <span class="footer-tag">Enter your orbit.</span>
+</footer>
+
+<!-- Supabase JS client (CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+// ─── SUPABASE CONFIG ───────────────────────────────────────────────────────
+// Replace these two values after you create your Supabase project (Step 2 below)
+const SUPABASE_URL  = 'YOUR_SUPABASE_URL';
+const SUPABASE_ANON = 'YOUR_SUPABASE_ANON_KEY';
+
+const db = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+// ──────────────────────────────────────────────────────────────────────────
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.08 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Stagger grid children
+document.querySelectorAll('.services-grid, .skills-masonry, .tools-grid, .spectrum-track').forEach(grid => {
+  grid.querySelectorAll('.reveal').forEach((card, i) => {
+    card.style.transitionDelay = (i * 0.07) + 's';
+  });
+});
+
+// Form handler — saves to Supabase contact_submissions table
+async function handleSubmit() {
+  const btn   = document.getElementById('submitBtn');
+  const fname = document.getElementById('fname').value.trim();
+  const email = document.getElementById('email').value.trim();
+
+  if (!fname || !email) {
+    btn.textContent = 'Please fill required fields';
+    setTimeout(() => btn.textContent = 'Send Enquiry', 2000);
+    return;
+  }
+
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  const { error } = await db.from('contact_submissions').insert([{
+    first_name:   fname,
+    last_name:    document.getElementById('lname').value.trim(),
+    email:        email,
+    organization: document.getElementById('org').value.trim(),
+    interest:     document.getElementById('interest').value,
+    message:      document.getElementById('msg').value.trim()
+  }]);
+
+  if (error) {
+    console.error(error);
+    btn.textContent = 'Error — please try again';
+    btn.style.background = '#c0392b';
+    btn.disabled = false;
+    setTimeout(() => {
+      btn.textContent = 'Send Enquiry';
+      btn.style.background = '';
+    }, 3000);
+  } else {
+    btn.textContent = 'Message Received ✓';
+    btn.style.background = '#1A7A6E';
+    // Clear form fields
+    ['fname','lname','email','org','msg'].forEach(id => {
+      document.getElementById(id).value = '';
+    });
+    document.getElementById('interest').selectedIndex = 0;
+  }
+}
+
+// Smooth anchor offset for fixed nav
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const top = target.getBoundingClientRect().top + window.scrollY - 68;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+</body>
+</html>
