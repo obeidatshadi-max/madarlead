@@ -122,6 +122,8 @@ nav {
   letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--ink);
 }
 .mobile-menu a:hover { color: var(--purple); }
+.mobile-menu a { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+.mobile-menu .mm-ar { font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 15px; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--gray-mid); }
 .nav-cta {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 12px; font-weight: 600; letter-spacing: 0.14em;
@@ -847,13 +849,13 @@ footer {
 </nav>
 <div class="mobile-menu" id="mobile-menu" hidden>
   <ul>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#digital-tools">Digital Tools</a></li>
-    <li><a href="/sps-reports/">Sample Reports</a></li>
-    <li><a href="#book">Book</a></li>
-    <li><a href="#soft-skills">Programs</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#services"><span>Services</span><span class="mm-ar" lang="ar" dir="rtl">الخدمات</span></a></li>
+    <li><a href="#digital-tools"><span>Digital Tools</span><span class="mm-ar" lang="ar" dir="rtl">الأدوات الرقمية</span></a></li>
+    <li><a href="/sps-reports/"><span>Sample Reports</span><span class="mm-ar" lang="ar" dir="rtl">تقارير نموذجية</span></a></li>
+    <li><a href="#book"><span>Book</span><span class="mm-ar" lang="ar" dir="rtl">الكتاب</span></a></li>
+    <li><a href="#soft-skills"><span>Programs</span><span class="mm-ar" lang="ar" dir="rtl">البرامج</span></a></li>
+    <li><a href="#about"><span>About</span><span class="mm-ar" lang="ar" dir="rtl">من نحن</span></a></li>
+    <li><a href="#contact"><span>Contact</span><span class="mm-ar" lang="ar" dir="rtl">تواصل معنا</span></a></li>
   </ul>
 </div>
 
