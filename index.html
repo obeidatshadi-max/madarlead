@@ -458,6 +458,7 @@ section { padding: 100px 5vw; }
 .tool-card.featured .tool-feature { color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.12); }
 .tool-card.featured .tool-link { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.2); }
 .tool-card.featured .tool-link:hover { border-color: white; color: white; }
+.tool-card.wide { grid-column: span 2; }
 .tool-bilingual {
   display: inline-flex; align-items: center; gap: 6px;
   font-family: 'Space Mono', monospace;
@@ -736,6 +737,7 @@ footer {
   .services-grid, .skills-masonry { grid-template-columns: 1fr; }
   .tools-grid { grid-template-columns: 1fr; }
   .tool-card.featured { grid-column: span 1; }
+  .tool-card.wide { grid-column: span 1; }
   .form-row { grid-template-columns: 1fr; }
   .orbit-diagram { width: 280px; height: 280px; }
   footer { flex-direction: column; gap: 12px; text-align: center; }
@@ -1078,6 +1080,20 @@ footer {
           <span class="tool-feature">Behavioral Logic</span>
           <span class="tool-feature">Execution Planning</span>
         </div>
+      </div>
+
+      <div class="tool-card wide reveal">
+        <span class="tool-number">06</span>
+        <div class="tool-name">SPS Style — Team</div>
+        <p class="tool-desc">A selling-style app for pharma sales managers and their medical reps. Each rep answers 16 short questions on their phone; the manager adds field observations. The app gives a Team Report, a coaching pack for every rep and a personal report for each rep. See sample reports for a 5-rep team, in English and Arabic.</p>
+        <div class="tool-features">
+          <span class="tool-feature">Team Report</span>
+          <span class="tool-feature">Rep Packs</span>
+          <span class="tool-feature">90-Day Plans</span>
+          <span class="tool-feature">Rep Toolkit</span>
+          <span class="tool-feature">EN / عربي</span>
+        </div>
+        <a href="/sps-reports/" class="tool-link">See Sample Reports</a>
       </div>
 
     </div>
