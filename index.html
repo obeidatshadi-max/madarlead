@@ -83,6 +83,21 @@ nav {
 .nav-links a:hover { color: var(--purple); }
 /* Extra link only where the menu has room; smaller screens reach the reports from the Digital Tools card. */
 @media (max-width: 1080px) { .nav-links .nav-extra { display: none; } }
+/* Keep every menu label on one line: tighten spacing as the screen narrows (the menu hides under 640px). */
+.nav-links a { white-space: nowrap; }
+@media (max-width: 1024px) { .nav-links { gap: 24px; } }
+@media (max-width: 880px) {
+  .nav-links { gap: 16px; }
+  .nav-links a { letter-spacing: 0.06em; }
+  .nav-cta { padding: 9px 14px; }
+}
+@media (max-width: 780px) {
+  nav { padding: 0 3vw; }
+  .nav-links { gap: 12px; }
+  .nav-links a { font-size: 12px; letter-spacing: 0.03em; }
+  .nav-logo { gap: 8px; }
+  .logo-descriptor { display: none; }
+}
 .nav-cta {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 12px; font-weight: 600; letter-spacing: 0.14em;
