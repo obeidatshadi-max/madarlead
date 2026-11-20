@@ -21,7 +21,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&family=Space+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Barlow+Condensed:wght@300;400;500;600;700&family=Barlow:wght@300;400;500&family=Space+Mono:ital@0;1&family=IBM+Plex+Sans+Arabic:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 :root {
@@ -459,6 +459,11 @@ section { padding: 100px 5vw; }
 .tool-card.featured .tool-link { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.2); }
 .tool-card.featured .tool-link:hover { border-color: white; color: white; }
 .tool-card.wide { grid-column: span 2; }
+.tool-ar { margin-top: 20px; padding-top: 18px; border-top: 1px solid rgba(107,45,139,0.12); font-family: 'IBM Plex Sans Arabic', 'Barlow', sans-serif; text-align: right; }
+.tool-ar .tool-name { font-family: 'IBM Plex Sans Arabic', sans-serif; letter-spacing: 0; text-transform: none; font-size: 17px; }
+.tool-ar .tool-desc { font-size: 14px; line-height: 1.85; }
+.tool-ar .tool-link { font-family: 'IBM Plex Sans Arabic', sans-serif; letter-spacing: 0; text-transform: none; font-size: 13px; }
+.tool-ar .tool-link::after { content: '↖'; }
 .tool-bilingual {
   display: inline-flex; align-items: center; gap: 6px;
   font-family: 'Space Mono', monospace;
@@ -1094,6 +1099,11 @@ footer {
           <span class="tool-feature">EN / عربي</span>
         </div>
         <a href="/sps-reports/" class="tool-link">See Sample Reports</a>
+        <div class="tool-ar" lang="ar" dir="rtl">
+          <div class="tool-name">SPS Style — الفريق</div>
+          <p class="tool-desc">تطبيق لأساليب البيع لمديري المبيعات في شركات الأدوية ومندوبيهم الطبيين. يجيب كل مندوب عن ١٦ سؤالاً قصيراً من هاتفه، ويضيف المدير ملاحظاته الميدانية. يقدّم التطبيق تقريراً للفريق، وملفاً توجيهياً لكل مندوب، وتقريراً شخصياً لكل مندوب. اطّلع على تقارير نموذجية لفريق من ٥ مندوبين، بالعربية والإنجليزية.</p>
+          <a href="/sps-reports/" class="tool-link">عرض التقارير النموذجية</a>
+        </div>
       </div>
 
     </div>
