@@ -81,6 +81,8 @@ nav {
   transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--purple); }
+/* Extra link only where the menu has room; smaller screens reach the reports from the Digital Tools card. */
+@media (max-width: 1080px) { .nav-links .nav-extra { display: none; } }
 .nav-cta {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 12px; font-weight: 600; letter-spacing: 0.14em;
@@ -771,6 +773,7 @@ footer {
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#digital-tools">Digital Tools</a></li>
+    <li class="nav-extra"><a href="/sps-reports/">Sample Reports</a></li>
     <li><a href="#book">Book</a></li>
     <li><a href="#soft-skills">Programs</a></li>
     <li><a href="#about">About</a></li>
