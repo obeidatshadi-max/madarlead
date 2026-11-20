@@ -85,6 +85,8 @@ nav {
 @media (max-width: 1080px) { .nav-links .nav-extra { display: none; } }
 /* Keep every menu label on one line: tighten spacing as the screen narrows (the menu hides under 640px). */
 .nav-links a { white-space: nowrap; }
+.nav-links a { display: flex; flex-direction: column; align-items: center; gap: 3px; line-height: 1.1; }
+.nav-links .nl-ar { font-family: 'IBM Plex Sans Arabic', sans-serif; font-size: 11px; font-weight: 400; letter-spacing: 0; text-transform: none; opacity: 0.8; }
 @media (max-width: 1024px) { .nav-links { gap: 24px; } }
 @media (max-width: 880px) {
   .nav-links { gap: 16px; }
@@ -834,13 +836,13 @@ footer {
     </div>
   </div>
   <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#digital-tools">Digital Tools</a></li>
-    <li class="nav-extra"><a href="/sps-reports/">Sample Reports</a></li>
-    <li><a href="#book">Book</a></li>
-    <li><a href="#soft-skills">Programs</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#services"><span class="nl-en">Services</span><span class="nl-ar" lang="ar" dir="rtl">الخدمات</span></a></li>
+    <li><a href="#digital-tools"><span class="nl-en">Digital Tools</span><span class="nl-ar" lang="ar" dir="rtl">الأدوات الرقمية</span></a></li>
+    <li class="nav-extra"><a href="/sps-reports/"><span class="nl-en">Sample Reports</span><span class="nl-ar" lang="ar" dir="rtl">تقارير نموذجية</span></a></li>
+    <li><a href="#book"><span class="nl-en">Book</span><span class="nl-ar" lang="ar" dir="rtl">الكتاب</span></a></li>
+    <li><a href="#soft-skills"><span class="nl-en">Programs</span><span class="nl-ar" lang="ar" dir="rtl">البرامج</span></a></li>
+    <li><a href="#about"><span class="nl-en">About</span><span class="nl-ar" lang="ar" dir="rtl">من نحن</span></a></li>
+    <li><a href="#contact"><span class="nl-en">Contact</span><span class="nl-ar" lang="ar" dir="rtl">تواصل معنا</span></a></li>
   </ul>
   <a href="#contact" class="nav-cta">Enquire</a>
   <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
