@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SPS Manager Reports — MadarLead</title>
+<meta name="description" content="Sample reports from the SPS Team app for a team of 5 medical reps: Team Report, Rep Packs and a Rep Report, in English and Arabic.">
+<link rel="canonical" href="https://madarlead.com/sps-reports/">
+<meta property="og:title" content="SPS Manager Reports — MadarLead">
+<meta property="og:description" content="Sample SPS Team app reports for a 5-rep demo team, in English and Arabic.">
+<meta property="og:image" content="https://madarlead.com/og-image.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one column of two language panels (side by side on wide screens), each a list of files with a download link */
+:root{
+  --bg:#f5f5fb; --card:#ffffff; --ink:#15132e; --muted:#64647e; --line:#e6e7f0;
+  --accent:#5b3ff0; --accent-ink:#ffffff; --soft:#efecfe; --ok:#1f7a57; --bad:#c23a30;
+  --f-latin:"Plus Jakarta Sans",system-ui,sans-serif; --f-ar:"IBM Plex Sans Arabic","Plus Jakarta Sans",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#110f24; --card:#1b1936; --ink:#ecebf7; --muted:#a3a2bd; --line:#2d2b4d;
+  --accent:#8b76ff; --accent-ink:#110f24; --soft:#2a2550; --ok:#6fd0a6; --bad:#ff8a80; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#110f24; --card:#1b1936; --ink:#ecebf7; --muted:#a3a2bd; --line:#2d2b4d;
+  --accent:#8b76ff; --accent-ink:#110f24; --soft:#2a2550; --ok:#6fd0a6; --bad:#ff8a80; color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--f-latin)}
+.wrap{max-width:1040px;margin:0 auto;padding-block:32px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header .brand{display:flex;align-items:center;gap:10px;font-weight:800}
+.dot{width:12px;height:12px;border-radius:50%;background:var(--accent);flex:none}
+.demo{margin-left:auto;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);border-radius:99px;padding:2px 10px}
+h1{font-size:clamp(26px,4vw,36px);line-height:1.15;margin:18px 0 6px;text-wrap:balance;letter-spacing:-.01em}
+.lead{color:var(--muted);max-width:62ch;margin:0 0 20px}
+.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-bottom:26px}
+.how div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;min-width:0}
+.how b{display:block;font-size:13px;color:var(--accent);margin-bottom:2px}
+.how p{margin:0;font-size:14px}
+.langs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:18px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;min-width:0}
+.panel h2{font-size:18px;margin:0 0 12px;display:flex;align-items:center;gap:8px}
+.panel[dir="rtl"]{font-family:var(--f-ar)}
+.file{display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px solid var(--line)}
+.file:first-of-type{border-top:0}
+.file .meta{flex:1;min-width:0}
+.file .name{font-weight:700;overflow-wrap:anywhere}
+.file .sub{font-size:13px;color:var(--muted)}
+.file.rep{border-top:2px dashed var(--line);margin-top:6px;padding-top:14px}
+.file.main{background:var(--soft);border:0;border-radius:12px;padding:12px;margin-bottom:6px}
+.dl{font:inherit;text-decoration:none;display:inline-block;font-weight:700;font-size:14px;border:0;border-radius:10px;padding:9px 14px;background:var(--accent);color:var(--accent-ink);cursor:pointer;white-space:nowrap}
+.dl:hover{filter:brightness(1.08)}
+.dl:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.note{margin-top:22px;font-size:13px;color:var(--muted);max-width:75ch}
+.contact{margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;background:var(--accent);color:var(--accent-ink);border-radius:16px;padding:16px 20px}
+.contact p{margin:0;flex:1 1 300px;min-width:0;font-weight:600}
+.contact p span{display:block;font-family:var(--f-ar);font-weight:500;opacity:.9}
+.contact a{color:var(--accent);background:var(--accent-ink);font-weight:800;text-decoration:none;border-radius:10px;padding:9px 16px;white-space:nowrap}
+.contact a:focus-visible{outline:3px solid var(--accent-ink);outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span>SPS Style · Team<span class="demo">Demo data</span></div>
+    <h1>SPS Manager Reports</h1>
+    <p class="lead">The reports a sales manager gets from the SPS Team app for a team of 5 medical reps, in English and Arabic. The report pages are the app's own screens, with a short guide added; the reps and their answers are fictional.</p>
+  </header>
+
+  <div class="how">
+    <div><b>Team Report · 17 pages</b><p>Read it once a month to plan the whole team. Start with “How to use this report” on page 2.</p></div>
+    <div><b>Rep Pack · 12–15 pages each</b><p>Open only the one rep's pack before that rep's one-to-one.</p></div>
+    <div><b>Rep Report · 3 pages</b><p>What each rep gets on their phone after the self-assessment, saved as a PDF. Sample: Ali.</p></div>
+    <div><b>Download</b><p>Press <strong>Download PDF</strong>. The file goes to your downloads, ready to send or print.</p></div>
+  </div>
+
+
+  <div class="langs">
+    <section class="panel" lang="en" aria-labelledby="h-en"><h2 id="h-en"><span class="dot"></span>English</h2><div id="list-en"></div></section>
+    <section class="panel" lang="ar" dir="rtl" aria-labelledby="h-ar"><h2 id="h-ar"><span class="dot"></span>العربية</h2><div id="list-ar"></div></section>
+  </div>
+
+  <div class="contact">
+    <p>Want these reports for your own sales team? Contact MadarLead.<span lang="ar" dir="rtl">هل تريد هذه التقارير لفريق المبيعات لديك؟ تواصل مع MadarLead.</span></p>
+    <a href="https://madarlead.com" target="_blank" rel="noopener">madarlead.com</a>
+  </div>
+
+  <p class="note">The style results describe how a rep likes to work. They are not a score of how good the rep is. The Rep Toolkit pages are for development talks only, not for ratings, pay or promotion. The Arabic guide pages have not had a native-speaker review yet.</p>
+</div>
+
+<script>
+const FILES = {
+  en: [
+    {path:"/sps-reports/pdf/en/team-report.pdf", save:"SPS Team Report.pdf", name:"Team Report", sub:"17 pages · whole team, all 11 features mapped", main:true},
+    {path:"/sps-reports/pdf/en/rep-ali.pdf", save:"SPS Rep Pack - Ali Hassan.pdf", name:"Rep Pack · Ali Hassan", sub:"12 pages · Aligned"},
+    {path:"/sps-reports/pdf/en/rep-zainab.pdf", save:"SPS Rep Pack - Zainab Kareem.pdf", name:"Rep Pack · Zainab Kareem", sub:"12 pages · Aligned"},
+    {path:"/sps-reports/pdf/en/rep-omar.pdf", save:"SPS Rep Pack - Omar Saleh.pdf", name:"Rep Pack · Omar Saleh", sub:"12 pages · Aligned"},
+    {path:"/sps-reports/pdf/en/rep-mustafa.pdf", save:"SPS Rep Pack - Mustafa Jaber.pdf", name:"Rep Pack · Mustafa Jaber", sub:"13 pages · Gap"},
+    {path:"/sps-reports/pdf/en/rep-noor.pdf", save:"SPS Rep Pack - Noor Abbas.pdf", name:"Rep Pack · Noor Abbas", sub:"15 pages · Not observed yet"},
+    {path:"/sps-reports/pdf/en/rep-report-ali.pdf", save:"SPS Rep Report - Ali Hassan.pdf", name:"Rep Report · Ali Hassan", sub:"3 pages · what the rep sees: own style, How to Grow, private compliance", rep:true},
+  ],
+  ar: [
+    {path:"/sps-reports/pdf/ar/team-report-ar.pdf", save:"SPS Team Report - AR.pdf", name:"تقرير الفريق", sub:"١٧ صفحة · الفريق كله، مع دليل الميزات الإحدى عشرة", main:true},
+    {path:"/sps-reports/pdf/ar/rep-ali-ar.pdf", save:"SPS Rep Pack - Ali Hassan - AR.pdf", name:"ملف المندوب · علي حسن", sub:"١٢ صفحة · متوافق"},
+    {path:"/sps-reports/pdf/ar/rep-zainab-ar.pdf", save:"SPS Rep Pack - Zainab Kareem - AR.pdf", name:"ملف المندوب · زينب كريم", sub:"١٢ صفحة · متوافق"},
+    {path:"/sps-reports/pdf/ar/rep-omar-ar.pdf", save:"SPS Rep Pack - Omar Saleh - AR.pdf", name:"ملف المندوب · عمر صالح", sub:"١٢ صفحة · متوافق"},
+    {path:"/sps-reports/pdf/ar/rep-mustafa-ar.pdf", save:"SPS Rep Pack - Mustafa Jaber - AR.pdf", name:"ملف المندوب · مصطفى جابر", sub:"١٣ صفحة · فجوة"},
+    {path:"/sps-reports/pdf/ar/rep-noor-ar.pdf", save:"SPS Rep Pack - Noor Abbas - AR.pdf", name:"ملف المندوب · نور عباس", sub:"١٥ صفحة · لم تتم ملاحظته بعد"},
+    {path:"/sps-reports/pdf/ar/rep-report-ali-ar.pdf", save:"SPS Rep Report - Ali Hassan - AR.pdf", name:"تقرير المندوب · علي حسن", sub:"٣ صفحات · ما يراه المندوب: أسلوبه، وكيف يتطور، والامتثال الخاص به", rep:true},
+  ]
+};
+const T = { en: "Download PDF", ar: "تنزيل PDF" };
+
+function render(lang){
+  const box = document.getElementById("list-" + lang);
+  FILES[lang].forEach(f => {
+    const row = document.createElement("div");
+    row.className = "file" + (f.main ? " main" : "") + (f.rep ? " rep" : "");
+    const meta = document.createElement("div"); meta.className = "meta";
+    const n = document.createElement("div"); n.className = "name"; n.textContent = f.name;
+    const s = document.createElement("div"); s.className = "sub"; s.textContent = f.sub;
+    meta.append(n, s);
+    const a = document.createElement("a"); a.className = "dl"; a.href = f.path; a.download = f.save; a.textContent = T[lang];
+    a.setAttribute("aria-label", T[lang] + " · " + f.name);
+    row.append(meta, a); box.append(row);
+  });
+}
+render("en"); render("ar");
+</script>
+</body>
+</html>
