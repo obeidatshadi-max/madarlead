@@ -7,3 +7,17 @@
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Repo notes for Claude are not part of the website: the site publishes the repo root (publish = "."),
+# so block them explicitly.
+[[redirects]]
+  from = "/CLAUDE.md"
+  to = "/404"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/claude.md"
+  to = "/404"
+  status = 404
+  force = true
